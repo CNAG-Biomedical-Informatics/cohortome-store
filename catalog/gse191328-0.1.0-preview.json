@@ -1,0 +1,11 @@
+{
+  "manifest_version": 1,
+  "dataset_id": "gse191328",
+  "version": "0.1.0-preview",
+  "schema_version": 1,
+  "archive": "gse191328-0.1.0-preview.zip",
+  "archive_sha256": "b55dacf8e5d957db0504e88e4eb1e16eb0d9e7ba6932422d50e63652d6c77dd1",
+  "archive_bytes": 29991920,
+  "distribution_status": "local-preview",
+  "redistribution_review": "pending"
+}

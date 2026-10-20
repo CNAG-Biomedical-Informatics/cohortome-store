@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "dataset_id": "default",
+  "version": "0.1.1-preview",
+  "schema_version": 1,
+  "synthetic": true,
+  "distribution_status": "private-preview",
+  "redistribution_review": "Public distribution review pending",
+  "archive": "default-0.1.1-preview.zip",
+  "archive_bytes": 872852,
+  "archive_sha256": "f78c0492a57cf40d2c30e8da20e5f49a5e6282a5e33e7315dc69f306b59b6211",
+  "download_url": "https://github.com/CNAG-Biomedical-Informatics/cohortome-store/releases/download/default-0.1.1-preview/default-0.1.1-preview.zip"
+}

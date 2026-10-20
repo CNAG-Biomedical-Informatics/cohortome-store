@@ -1,0 +1,11 @@
+{
+  "manifest_version": 1,
+  "dataset_id": "gse42296",
+  "version": "0.1.0-preview",
+  "schema_version": 1,
+  "archive": "gse42296-0.1.0-preview.zip",
+  "archive_sha256": "37fa338bd583d1fe9d6d515f6bb3bd85cb56796bb8833ba984ee64bd50f2fab9",
+  "archive_bytes": 47358315,
+  "distribution_status": "local-preview",
+  "redistribution_review": "pending"
+}

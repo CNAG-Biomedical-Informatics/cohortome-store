@@ -1,0 +1,18 @@
+# Generated public inputs and package outputs; never restricted data.
+/downloads/
+/build/
+/dist/
+
+# Local environments and machine configuration.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Private working notes are not distribution material.
+AGENTS.md
+SESSION_NOTES.md

@@ -1,0 +1,108 @@
+{
+  "audit_version": 1,
+  "metadata_rows": 5533,
+  "metadata_participants": 131,
+  "source_files_sha256": {
+    "ibdmdb-metadata.csv": "656b7bd97660ddb875548805e30bede31f2d1208293f7170d2d5755e33862ec9",
+    "ibdmdb-metabolomics.biom.gz": "ae0eebf266ba8ec552fe148d3700c8ac9a635d5f36cade979da3f0c1cc05e0d8",
+    "ibdmdb-proteomics.tsv.gz": "a001f9dfe9417f1d85004a43ec97199a16ad7e55862459f36da769da8632b12b",
+    "ibdmdb-serology.tsv": "25f2d3fdc9b7f2f4d85a1549eb002567f0edf3b290a907c3839560e025c1307c"
+  },
+  "modalities": {
+    "metabolomics": {
+      "matrix_columns": 546,
+      "feature_or_metadata_rows": 81867,
+      "duplicate_matrix_columns": 0,
+      "exact_metadata_matches": 546,
+      "unmatched_columns": 0,
+      "participants": 106,
+      "missing_participant_links": 0,
+      "missing_week": 0,
+      "diagnosis_sample_counts": {
+        "CD": 265,
+        "UC": 146,
+        "nonIBD": 135
+      },
+      "rows_with_nonempty_metabolite_annotation": 592
+    },
+    "proteomics": {
+      "matrix_columns": 450,
+      "feature_or_metadata_rows": 11284,
+      "duplicate_matrix_columns": 0,
+      "exact_metadata_matches": 450,
+      "unmatched_columns": 0,
+      "participants": 89,
+      "missing_participant_links": 0,
+      "missing_week": 0,
+      "diagnosis_sample_counts": {
+        "CD": 204,
+        "UC": 124,
+        "nonIBD": 122
+      }
+    },
+    "serology": {
+      "matrix_columns": 211,
+      "feature_or_metadata_rows": 14,
+      "duplicate_matrix_columns": 0,
+      "exact_metadata_matches": 210,
+      "unmatched_columns": 1,
+      "participants": 67,
+      "missing_participant_links": 0,
+      "missing_week": 0,
+      "diagnosis_sample_counts": {
+        "CD": 114,
+        "nonIBD": 49,
+        "UC": 47
+      },
+      "unmatched_all_empty_columns": 0,
+      "unmatched_unnamed_columns": 0
+    }
+  },
+  "overlaps": [
+    {
+      "modalities": [
+        "metabolomics",
+        "proteomics"
+      ],
+      "participants": 83,
+      "exact_external_ids": 308,
+      "participant_week_labels": 308
+    },
+    {
+      "modalities": [
+        "metabolomics",
+        "serology"
+      ],
+      "participants": 67,
+      "exact_external_ids": 0,
+      "participant_week_labels": 13
+    },
+    {
+      "modalities": [
+        "proteomics",
+        "serology"
+      ],
+      "participants": 57,
+      "exact_external_ids": 0,
+      "participant_week_labels": 12
+    },
+    {
+      "modalities": [
+        "metabolomics",
+        "proteomics",
+        "serology"
+      ],
+      "participants": 57,
+      "exact_external_ids": 0,
+      "participant_week_labels": 9
+    }
+  ],
+  "limitations": [
+    "Metadata matching is exact by External ID within modality.",
+    "Participant/week overlap is not proof of contemporaneous specimen collection.",
+    "Serology contains administrative and categorical rows as well as numeric assays.",
+    "Metabolite annotation presence does not establish chemical identification confidence.",
+    "No matrix conversion, normalization, imputation or replicate collapsing performed.",
+    "Redistribution review remains pending."
+  ]
+}

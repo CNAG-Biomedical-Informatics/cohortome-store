@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "dataset_id": "ibdmdb",
+  "version": "0.1.0-preview",
+  "schema_version": 1,
+  "distribution_status": "private-preview",
+  "download_url": "https://github.com/CNAG-Biomedical-Informatics/cohortome-store/releases/download/ibdmdb-0.1.0-preview/ibdmdb-0.1.0-preview.zip",
+  "data_use_basis": "Public HMP/iHMP products; consortium unrestricted-use statements",
+  "redistribution_review": "Final exact-product scope check before publication",
+  "archive": "ibdmdb-0.1.0-preview.zip",
+  "archive_sha256": "317d41eb9b24e93080a49946c6090ed3a8dac627de50b562b875fca7d421cbcc",
+  "archive_bytes": 88331018
+}

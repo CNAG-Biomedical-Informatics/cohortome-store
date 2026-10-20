@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "dataset_id": "synthetic-autoimmune-demo",
+  "version": "0.1.1-preview",
+  "schema_version": 1,
+  "synthetic": true,
+  "distribution_status": "private-preview",
+  "redistribution_review": "Public distribution review pending",
+  "archive": "synthetic-autoimmune-demo-0.1.1-preview.zip",
+  "archive_bytes": 1283868,
+  "archive_sha256": "eb461c2df1ee8538baa74aa0bfed2e3afea770f14e88c4b38f33d1d15762be8d",
+  "download_url": "https://github.com/CNAG-Biomedical-Informatics/cohortome-store/releases/download/synthetic-autoimmune-demo-0.1.1-preview/synthetic-autoimmune-demo-0.1.1-preview.zip"
+}
