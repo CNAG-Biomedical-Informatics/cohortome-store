@@ -1,8 +1,14 @@
 # Resource preparation and packaging
 
+New contributors: read the
+[preparation guide](https://cnag-biomedical-informatics.github.io/cohortome/docs/admin-guide/prepare-datasets)
+and run the [minimal example](../examples/minimal-dataset/README.md) first.
+
 Implemented commands:
 
-- `build_synthetic.py`: package the two main bundled synthetic fixtures.
+- `build_synthetic.py`: package older bundled synthetic fixtures; its source paths
+  predate the current app layout. Use a compatible historical revision for those
+  previews, not this script as the current onboarding example.
 - `prepare_gse191328.py`: assemble original public IBD count files and metadata.
 - `prepare_gse42296.py`: convert the ED-Omics Crohn/RA microarray export.
 - `prepare_gse65391.py`: provisional SLE adapter; on hold pending replicate review.
@@ -11,6 +17,9 @@ Implemented commands:
 - `verify_resource.py MANIFEST ARCHIVE`: verify against a repository catalogue entry.
 
 See each dataset README for inputs, commands, limitations and redistribution status.
+These scripts are not dynamically downloaded or executed by COHORTome. The app
+has its own shipped, reviewed fetch-and-build recipes; this documentation does
+not change them.
 
 The intended workflow is:
 

@@ -1,0 +1,5 @@
+snapshot_id,patient_id,visit_id,days_from_baseline,sex,diagnosis
+T001:V1,T001,V1,0,Female,CD
+T001:V2,T001,V2,14,Female,CD
+T002:V1,T002,V1,0,Male,UC
+T002:V2,T002,V2,14,Male,UC

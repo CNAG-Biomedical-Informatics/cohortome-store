@@ -1,0 +1,5 @@
+sample_id	patient_id	visit_id	days_from_baseline
+T001:RNA1	T001	V1	0
+T001:RNA2	T001	V2	14
+T002:RNA1	T002	V1	0
+T002:RNA2	T002	V2	14

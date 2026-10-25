@@ -20,6 +20,10 @@ dataset/
     clarid_subjects.csv
 ```
 
-The release contract must also specify provenance, licensing, checksums and
-explicit linkage requirements. Contributor instructions will reference the
-canonical versioned schemas and validator from COHORTome, not copied rules.
+For a complete runnable starting point, use the
+[minimal dataset example](../examples/minimal-dataset/README.md). Follow the
+[preparation guide](https://cnag-biomedical-informatics.github.io/cohortome/docs/admin-guide/prepare-datasets)
+and [review checklist](https://cnag-biomedical-informatics.github.io/cohortome/docs/admin-guide/dataset-review-checklist).
+ZIP import also requires `resource.json` inside the dataset root. Document
+provenance, licensing, checksums and explicit linkage; do not copy or extend the
+canonical schemas here.
