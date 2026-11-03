@@ -1,5 +1,9 @@
 # Dataset catalogue
 
+The app-facing list is [`catalogue.json`](catalogue.json). See
+[App catalogue](APP-CATALOGUE.md) for its format and update rules. The inventory
+below describes earlier preparation records, not the current app feed.
+
 This inventory includes local previews and private GitHub release downloads.
 Versioned JSON entries record archive checksums and exact download URLs where
 available. Private downloads require repository access; see [instructions](../DOWNLOADS.md).
