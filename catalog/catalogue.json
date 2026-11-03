@@ -3,6 +3,23 @@
   "dataset_schema_version": 1,
   "datasets": [
     {
+      "dataset_id": "cineca-uk1-demo",
+      "name": "CINECA UK1 + GEUVADIS demo",
+      "version": "0.1.0",
+      "install_mode": "archive",
+      "dataset_schema_version": 1,
+      "synthetic": false,
+      "description": "2,504 individuals with synthetic clinical attributes, measured expression for 445 individuals and a 44-variant chromosome 22 panel. Requires the current app with variant-browser support.",
+      "modalities": "Clinical, biosamples, DNA sequencing, transcriptomics",
+      "modality_keys": ["clinical", "dna_sequencing", "transcriptomics"],
+      "terms": "CINECA clinical data: CC-BY as declared by the source; retain its preamble and acknowledge EC H2020 grant 825775. GEUVADIS archive: CC-BY-4.0. Retain 1000 Genomes, ClinVar and SnpEff attribution and source terms. Clinical attributes are synthetic; molecular measurements are not. Not for clinical diagnosis or associations with fictional clinical traits. Component terms are included in TERMS.md.",
+      "source_page": "https://ega-archive.org/datasets/EGAD00001006673",
+      "source_label": "CINECA UK1",
+      "source_policy_url": "https://github.com/CNAG-Biomedical-Informatics/cohortome-store/blob/main/datasets/cineca-uk1/TERMS.md",
+      "archive_bytes": 88121275,
+      "archive_sha256": "1f24126bd1c5f4270e81c1006b7a6cca89974c7a7af8371085b0cc3616997d5b"
+    },
+    {
       "dataset_id": "gse85034",
       "name": "GSE85034 — psoriasis treatment study",
       "version": "0.1.0-preview",
@@ -24,6 +41,7 @@
     },
     {
       "dataset_id": "default",
+      "install_mode": "included",
       "name": "Synthetic longitudinal demo",
       "synthetic": true,
       "version": "0.1.1-preview",
@@ -40,6 +58,7 @@
     },
     {
       "dataset_id": "synthetic-cross-sectional-demo",
+      "install_mode": "included",
       "name": "Synthetic cross-sectional demo",
       "synthetic": true,
       "version": "0.1.1-preview",

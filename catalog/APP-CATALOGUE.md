@@ -6,6 +6,19 @@ The older per-dataset JSON files are preparation records, not the app feed.
 
 ## Updating the list
 
+`install_mode` controls the app's category label, icon, filter and install action:
+
+| Value | App label | Meaning |
+| --- | --- | --- |
+| `included` | Included | Demo bundled with the app; no download |
+| `archive` | Ready to install | Prepared package downloaded and validated |
+| `source` | Fetch & prepare | Source products downloaded and converted locally |
+
+Use these values explicitly for new entries. An omitted value means `archive`.
+Do not infer installation type from the dataset name or its modalities.
+An `included` entry must also be shipped by the installed app; the catalogue
+cannot grant a new dataset bundled status or bypass installation safeguards.
+
 - Keep `catalogue_version: 1` for this catalogue structure and
   `dataset_schema_version: 1` for the current dataset contract.
 - Use a unique `dataset_id`, a resource `version`, a name, description and source
