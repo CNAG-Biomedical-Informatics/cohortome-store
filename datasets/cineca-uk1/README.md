@@ -1,6 +1,7 @@
 # CINECA UK1 + GEUVADIS demo
 
-**Prepared package:** 2,504 clinical individuals and biosamples, GEUVADIS
+**Prepared package:** 2,504 clinical individuals, 2,504 supplied biosamples plus
+445 GEUVADIS analytical sample records, GEUVADIS
 expression for 445 individuals (23,722 genes), and a 44-variant chromosome 22
 panel across 2,504 DNA samples. In COHORTome, select **Add dataset → Ready to
 install**. Use the current source app with variant-browser support; the released
@@ -27,7 +28,8 @@ used the same specimen. No tissue, visit or age is inferred.
 
 The basic package contains no molecular data. The optional preparation steps
 below add measured GEUVADIS expression or prepare a separate variant panel.
-ClarIDs are not included yet. Molecular measurements are not synthetic.
+The optional ClarID step below adds subject and biosample labels. Molecular
+measurements are not synthetic.
 
 ## Prepare
 
@@ -126,3 +128,37 @@ PYTHONPATH=../cohortome/.deps:../cohortome python3 scripts/package_cineca_releas
 The release includes original source notices, preparation provenance, file
 checksums and [component-specific terms](TERMS.md). No raw VCF is included.
 Annotations are supplied ClinVar/SnpEff results, not an independent ACMG assessment.
+
+## Add ClarID labels
+
+Use ClarID-Tools **0.05**, its GitHub checkout (for `utils/bff`), and a COHORTome
+checkout with biosample ClarID support. Clinical JSON remains unchanged;
+biosamples gain assay provenance and separate GEUVADIS analytical records.
+
+```bash
+PYTHONPATH=../cohortome/.deps:../cohortome python3 scripts/prepare_cineca_clarids.py \
+  --package build/cineca-uk1-browser --output build/cineca-uk1-clarids \
+  --cohortome ../cohortome --clarid-checkout /path/to/clarid-tools \
+  --executable /path/to/clarid-tools/bin/clarid-tools
+```
+
+| Field | Mapping |
+| --- | --- |
+| Subject number | Original HG/NA numeric suffix, reused for biosamples (`HG00096` → `96`); collisions are rejected |
+| Study/project | Local `CINECA-UK1` entry in the packaged codebook 0.04 |
+| Condition | First listed synthetic ICD-10 code, **not** a primary diagnosis; `F3181` becomes `F31.81` |
+| No recorded condition | `R69` placeholder, not a new diagnosis or a claim of health |
+| Sex, species, tissue | Supplied sex, taxon 9606 and supplied blood term; RNA tissue stays unavailable |
+| Assay | WGS for 2,504 DNA samples; RNA-seq for 445 GEUVADIS samples |
+| Other fields | Not Available; missing duration is `P0N`, not zero |
+
+All diagnoses remain in BFF. Case/control status, age and normal tissue
+are not inferred. GEUVADIS RNA records represent analytical samples, not the
+supplied blood specimens. WGS assignment follows prepared analytical links;
+matching subject/sample IDs alone do not prove physical specimen identity.
+Different specimens may share a ClarID; original IDs remain their identities.
+Both label formats are decoded for verification. Mapping files, local codebook
+and preparation provenance are included in the new package.
+
+Pass `build/cineca-uk1-clarids` to `package_cineca_release.py --package` to make
+a new archive. Uploading and updating the catalogue are separate steps.
